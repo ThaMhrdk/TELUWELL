@@ -21,7 +21,7 @@ public class DbBooking {
         String sql = "SELECT b.Idbooking, k.nmkonselor, b.tglbooking, b.jammulaib, b.jamselesaib, b.metode, b.status " +
                      "FROM booking b " +
                      "JOIN jadwal j ON b.Idjadwal = j.Idjadwal " +
-                     "JOIN jadwalkons jk ON j.Idjadwal = jk.Idjadwal " +
+                     "JOIN jadwalkons jk ON j.Idjadwal = jk.Idjadwal "  +
                      "JOIN konselor k ON jk.Idkonselor = k.Idkonselor " +
                      "WHERE b.nim = ?";
         Connection connection = null;
